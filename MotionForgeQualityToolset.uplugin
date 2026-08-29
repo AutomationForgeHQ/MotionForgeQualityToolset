@@ -1,7 +1,7 @@
 {
   "FileVersion": 3,
   "Version": 1,
-  "VersionName": "0.1.0\r",
+  "VersionName": "0.1.0",
   "FriendlyName": "MotionForge Quality Toolset",
   "Description": "Exposes MotionForge Quality's measurements as Model Context Protocol tools. A surface only: all logic lives in the capability plugin, and deleting this changes nothing about how the checks behave.",
   "Category": "Experimental",
