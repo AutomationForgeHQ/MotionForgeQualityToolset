@@ -1,0 +1,36 @@
+{
+  "FileVersion": 3,
+  "Version": 1,
+  "VersionName": "0.1.0\r",
+  "FriendlyName": "MotionForge Quality Toolset",
+  "Description": "Exposes MotionForge Quality's measurements as Model Context Protocol tools. A surface only: all logic lives in the capability plugin, and deleting this changes nothing about how the checks behave.",
+  "Category": "Experimental",
+  "CreatedBy": "Blackcode",
+  "EditorOnly": true,
+  "EnabledByDefault": false,
+  "CanContainContent": false,
+  "IsExperimentalVersion": true,
+  "Installed": false,
+  "Modules": [
+    {
+      "Name": "MotionForgeQualityToolset",
+      "Type": "Editor",
+      "LoadingPhase": "PostEngineInit",
+      "TargetAllowList": [
+        "Editor"
+      ]
+    }
+  ],
+  "Plugins": [
+    {
+      "Name": "MotionForgeQuality",
+      "Enabled": true,
+      "Comment": "The capability this adapter exposes."
+    },
+    {
+      "Name": "ToolsetRegistry",
+      "Enabled": true,
+      "Comment": "Where tools are registered. Not ModelContextProtocol - that is one transport reading this registry, and coupling to it would be backwards."
+    }
+  ]
+}
