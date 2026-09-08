@@ -26,7 +26,7 @@ class MOTIONFORGEQUALITYTOOLSET_API UMotionForgeQualityToolset : public UToolset
 
 public:
 
-	virtual FString GetToolsetVersion() const override { return TEXT("0.1"); }
+	virtual FString GetToolsetVersion() const override { return TEXT("0.1.1"); }
 
 	/**
 	 * Measure where a clip puts a limb inside its own body.

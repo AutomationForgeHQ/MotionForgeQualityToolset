@@ -1,6 +1,6 @@
 # MotionForge Quality Toolset
 
-[MotionForge Quality](../MotionForgeQuality/README.md) as Model Context Protocol tools.
+[MotionForge Quality](https://kovati.dev/plugins/motionforge/) as Model Context Protocol tools.
 
 A surface and nothing else: every function forwards to `UMotionQualitySubsystem` and adds no logic,
 no state and no safety of its own. Delete this plugin and the checks behave exactly as they did.
