@@ -20,6 +20,7 @@ public class MotionForgeQualityToolset : ModuleRules
 		PrivateDependencyModuleNames.AddRange(
 			new string[]
 			{
+				"Projects",         // IPluginManager, so GetToolsetVersion() reads the descriptor
 				"UnrealEd",   // GEditor, to reach the subsystem
 			}
 			);

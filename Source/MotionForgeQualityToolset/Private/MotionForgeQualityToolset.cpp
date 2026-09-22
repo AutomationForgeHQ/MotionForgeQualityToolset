@@ -3,6 +3,7 @@
 #include "MotionQualitySubsystem.h"
 
 #include "Kismet/KismetSystemLibrary.h"
+#include "Interfaces/IPluginManager.h"
 
 FMotionPenetrationReport UMotionForgeQualityToolset::MeasureMotionPenetration(
 	const FString& SequencePath, const FString& TargetMeshPath, const FString& PhysicsAssetPath,
@@ -77,4 +78,13 @@ FMotionProxyResult UMotionForgeQualityToolset::CreateMotionMeasurementProxy(
 	}
 
 	return Result;
+}
+
+FString UMotionForgeQualityToolset::GetToolsetVersion() const
+{
+	// The descriptor is the version. Reading it here rather than repeating it means there is no
+	// second copy to keep true - and no window, between a bump and a fix, where an agent is told
+	// a number the package does not carry.
+	const TSharedPtr<IPlugin> Plugin = IPluginManager::Get().FindPlugin(TEXT(UE_PLUGIN_NAME));
+	return Plugin.IsValid() ? Plugin->GetDescriptor().VersionName : FString();
 }
